@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="inner">
+    <div class="nav">
+      <div class="nav__left">
+        <%= link_to "GAME CONNECT", root_path, class: :logo %>
+      </div>
+      <%# <% if user_signed_in? %>
+        <%# <div class="nav__right">  %>
+          <%# <%= link_to "ログアウト", "#", method: :DELETE, class: :nav__logout %>
+          <%# <%= link_to "New Proto", "#", class: :nav__btn %>
+        <%# </div> %>
+      <%# <% else %>
+      <%# ログインしていないときは以下を表示するようにしましょう %>
+      <div class="nav__right">
+        <%= link_to "ログイン", "#", class: :nav__btn %>
+        <%= link_to "新規登録", "#", class: :nav__btn %>
+      </div>
+      <%# <% end %>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,58 @@
+/* ヘッダー */
+
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: rebeccapurple;
+  margin-bottom: 0px;
+}
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  color: aqua;
+  font-size: 50px;
+  width: 200px;
+  text-decoration: none;
+}
+.nav__btn{
+  display: inline-block;
+  margin: 10px;
+  padding: 0.4em 1.6em;
+  font-size: 15px;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.main{
+  display: flex;
+}
+
+.left_bar{
+  height: 90vh;
+  width: 250px;
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_menu{
+  height: 40px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(238, 56, 56);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
