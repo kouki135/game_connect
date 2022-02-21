@@ -1,20 +1,61 @@
-<header class="header">
-  <div class="inner">
-    <div class="nav">
+<%# <header class="header"> %>
+  <%# <div class="inner"> %>
+    <%# <div class="nav"> %>
+      <%# <div class="nav__left"> %>
+        <%# <%= link_to "GAME CONNECT", root_path, class: :logo %>
+      <%# </div> %>
+      <%# <% if user_signed_in? %>
+        <%# <div class="nav__right"> %>
+          <%# <%= link_to "ログアウト", destroy_user_session_path, method: :DELETE, class: :nav__btn %>
+          <%# <%= link_to "ユーザー名", edit_user_registration_path, class: :nav__btn %>
+        <%# </div> %>
+      <%# <% else %>
+      <%# <div class="nav__right"> %>
+        <%# <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+        <%# <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %
+      <%# </div> %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+<%# </header> %>
+
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
       <div class="nav__left">
         <%= link_to "GAME CONNECT", root_path, class: :logo %>
       </div>
-      <% if user_signed_in? %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-white">ユーザー一覧</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">フォローユーザー</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">チェックした募集</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">チャットルーム</a></li>
+        </ul>
+
+        <div class="text-end">
+        <% if user_signed_in? %>
         <div class="nav__right">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :DELETE, class: :nav__btn %>
-          <%= link_to "ユーザー名", edit_user_registration_path, class: :nav__btn %>
+          <%= link_to  destroy_user_session_path, method: :DELETE do %>
+          <button type="button" class="btn btn-outline-light me-2">ログアウト</button>
+          <% end %>
+          <%= link_to edit_user_registration_path do %>
+          <button type="button" class="btn btn-warning">ユーザー名</button>
+          <% end %>
         </div>
-      <% else %>
-      <div class="nav__right">
-        <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-        <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+        <% else %>
+          <%= link_to  new_user_session_path do %>
+          <button type="button" class="btn btn-outline-light me-2">ログイン</button>
+          <% end %>
+          <%= link_to new_user_registration_path do%>
+          <button type="button" class="btn btn-warning">新規登録</button>
+          <% end %>
+        <% end %>
+        </div>
       </div>
-      <% end %>
     </div>
-  </div>
-</header>
+  </header>

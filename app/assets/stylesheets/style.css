@@ -20,6 +20,7 @@
   font-size: 50px;
   width: 200px;
   text-decoration: none;
+  margin-right: 40px;
 }
 .nav__btn{
   display: inline-block;
@@ -50,6 +51,10 @@
   text-decoration: none;
   font-size: 25px;
   color: rgb(238, 56, 56);
+}
+
+.nav-link{
+  color: aqua;
 }
 
 * {
