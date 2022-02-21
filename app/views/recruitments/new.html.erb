@@ -7,6 +7,9 @@
     <div class="main_page">
       <h1>投稿フォーム</h1>
       <%= form_with model: @recruitment, local: true do |f| %>
+
+        <%= render 'shared/error_messages', model: f.object %>
+        
         <h3>応募タイトル</h3>
         <%= f.text_field :recruitment_title %>
         <h3>ゲームタイトル</h3>
