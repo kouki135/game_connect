@@ -1,17 +1,25 @@
 class RecruitmentsController < ApplicationController
   def index
-    @recruitments = Recruitment.new
+    @recruitments = Recruitment.all
+  end
+
+  def new
+    @recruitment = Recruitment.new
   end
 
   def create
-    @recruitments = Recruitment.new(recruitment_params)
-
+    @recruitment = Recruitment.new(recruitment_params)
+    if @recruitment.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
-  def message_params
-    params.require(:recruitment).permit(:content, :image).merge(user_id: current_user.id)
+  def recruitment_params
+    params.require(:recruitment).permit(:recruitment_title, :game_title, :content).merge(user_id: current_user.id)
   end
 
 

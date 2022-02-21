@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+</body>
+  <div class="main">
+    <div class="left_bar">
+      <%= link_to "投稿する", new_recruitment_path, class: :main_menu %>
+    </div>
+    <div class="main_page">
+      <h1>投稿フォーム</h1>
+      <%= form_with model: @recruitment, local: true do |f| %>
+        <h3>応募タイトル</h3>
+        <%= f.text_field :recruitment_title %>
+        <h3>ゲームタイトル</h3>
+        <%= f.text_field :game_title %>
+        <h3>内容</h3>
+        <%= f.text_area :content %>
+        <%= f.submit '投稿' %>
+      <% end %>
+    </div>
+  </div>
+</body>
