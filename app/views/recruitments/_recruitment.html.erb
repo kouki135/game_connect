@@ -1,0 +1,17 @@
+<div class="recruitment">
+  <%= link_to("#", class: 'upper-recruitment') do %>
+    <%# <div class="recruitment-date"> %>
+      <!-- 投稿した時刻を出力する -->
+      <%# <%= l recruitment.created_at %>
+    <%# </div> %>
+    <div class="recruitment-game-title">
+      <%= recruitment.game_title %>
+    </div>
+    <div class="recruitment-content">
+      <%= recruitment.title %>
+    </div>
+    <div class="recruitment-user">
+      <%= recruitment.user.nickname %>さん
+    </div>
+  <% end %>
+</div>

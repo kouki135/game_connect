@@ -43,8 +43,8 @@
           <%= link_to  destroy_user_session_path, method: :DELETE do %>
           <button type="button" class="btn btn-outline-light me-2">ログアウト</button>
           <% end %>
-          <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-warning">ユーザー名</button>
+          <%= link_to  edit_user_registration_path do %>
+          <button type="button" class="btn btn-warning"><%= current_user.nickname %></button>
           <% end %>
         </div>
         <% else %>

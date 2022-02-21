@@ -2,7 +2,7 @@ class RecruitmentsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
-    @recruitments = Recruitment.all
+    @recruitments = Recruitment.order(id: 'DESC')
   end
 
   def new
@@ -21,7 +21,7 @@ class RecruitmentsController < ApplicationController
   private
 
   def recruitment_params
-    params.require(:recruitment).permit(:recruitment_title, :game_title, :content).merge(user_id: current_user.id)
+    params.require(:recruitment).permit(:title, :game_title, :content).merge(user_id: current_user.id)
   end
 
 

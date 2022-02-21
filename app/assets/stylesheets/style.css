@@ -57,6 +57,49 @@
   color: aqua;
 }
 
+/* 投稿フォーム */
+
+.title{
+  width: 500px;
+  height: 70px;
+}
+
+.game_title{
+  width: 500px;
+}
+
+.content{
+  width: 500px;
+}
+
+/* 投稿一覧 */
+
+.recruitment{
+  width: 800px;
+  margin: 20px;
+  background-color: rgb(221, 240, 241);
+}
+
+.recruitment:hover{
+  background-color: rgb(245, 222, 243);
+}
+
+.upper-recruitment{
+  text-decoration: none;
+}
+
+.recruitment-game-title{
+  color: black;
+  font-size: 20px;
+}
+
+.recruitment-user{
+  color: brown;
+}
+
+
+/* エラーメッセージ */
+
 .error-message{
   color: red;
 }

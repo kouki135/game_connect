@@ -5,17 +5,18 @@
       <%= link_to "投稿する", new_recruitment_path, class: :main_menu %>
     </div>
     <div class="main_page">
-      <h1>投稿フォーム</h1>
+      <h3>投稿フォーム</h3>
       <%= form_with model: @recruitment, local: true do |f| %>
 
         <%= render 'shared/error_messages', model: f.object %>
-        
-        <h3>応募タイトル</h3>
-        <%= f.text_field :recruitment_title %>
-        <h3>ゲームタイトル</h3>
-        <%= f.text_field :game_title %>
-        <h3>内容</h3>
-        <%= f.text_area :content %>
+
+        <h4>ゲームタイトル（必須）</h4>
+        <%= f.text_field :game_title, class:'game_title' %>
+        <h4>募集概要（必須）</h4>
+        <%= f.text_area :title, class:'title' %>
+        <h4>詳細</h4>
+        <%= f.text_area :content, class:'content' %>
+
         <%= f.submit '投稿' %>
       <% end %>
     </div>

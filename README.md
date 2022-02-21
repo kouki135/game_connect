@@ -41,7 +41,7 @@
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | game_title        | string     | null: false                    |
-| recruitment_title | string     | null: false                    |
+| title             | string     | null: false                    |
 | content           | text       | null: false                    |
 | user              | references | null: false, foreign_key: true |
 | favorite          | references | null: false, foreign_key: true |
