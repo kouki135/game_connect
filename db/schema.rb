@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2022_02_21_024937) do
   create_table "recruitments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "game_title", null: false
     t.string "title", null: false
-    t.text "content"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -1,8 +1,8 @@
 class RecruitmentsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @recruitments = Recruitment.order(id: 'DESC')
+    @recruitments = Recruitment.order(updated_at: 'DESC')
   end
 
   def new
@@ -27,7 +27,17 @@ class RecruitmentsController < ApplicationController
   end
 
   def edit
-    
+    @recruitment = Recruitment.find(params[:id])
+    redirect_to action: :index if current_user.id != @recruitment.user_id
+  end
+
+  def update
+    @recruitment = Recruitment.find(params[:id])
+    if @recruitment.update(recruitment_params)
+      redirect_to action: :index
+    else
+      render :edit
+    end
   end
 
   private

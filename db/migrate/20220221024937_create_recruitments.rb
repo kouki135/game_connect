@@ -3,7 +3,6 @@ class CreateRecruitments < ActiveRecord::Migration[6.0]
     create_table :recruitments do |t|
       t.string :game_title, null: false
       t.string :title, null: false
-      t.text :content
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
