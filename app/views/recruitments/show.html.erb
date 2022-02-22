@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+</body>
+  <div class="main">
+    <div class="left_bar">
+      <%= link_to "投稿する", new_recruitment_path, class: :main_menu %>
+    </div>
+      <div class="recruitment-detail">
+        <div class="detail-apace">
+          <div class="detail-game-title">
+            <%= @recruitment.game_title %>
+          </div>
+          <div class="detail-title">
+            <%= @recruitment.title %>
+          </div>
+          <div class="detail-content">
+            <%= @recruitment.content %>
+          </div>
+          <div class="detail-user">
+            <%= @recruitment.user.nickname %>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>

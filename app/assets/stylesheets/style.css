@@ -93,10 +93,25 @@
   font-size: 20px;
 }
 
-.recruitment-user{
+.recruitment_user{
   color: brown;
 }
 
+.recruitment_game_title_date{
+  display: flex;
+}
+
+.recruitment-game-title{
+  margin-right: 30px;
+}
+
+/* 投稿詳細 */
+
+.detail-game-title{
+  border: 2px solid black ;
+  width: 100px;
+  height: 10vh;
+}
 
 /* エラーメッセージ */
 

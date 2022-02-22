@@ -18,6 +18,18 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @recruitment = Recruitment.find(params[:id])
+    if current_user.id == @recruitment.user_id
+      @recruitment.destroy
+      redirect_to root_path
+    end
+  end
+
+  def edit
+    
+  end
+
   private
 
   def recruitment_params
