@@ -78,10 +78,10 @@
 
 ## relationship テーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| following | string     | null: false                    |
-| follower  | references | null: false, foreign_key: true |
+| Column    | Type       | Options                                   |
+| --------- | ---------- | ----------------------------------------- |
+| user_id   | references | foreign_key: true                         |
+| follow_id | references | follow, foreign_key: { to_table: :users } |
 
 ### Association
 
