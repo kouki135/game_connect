@@ -10,7 +10,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :ニックネーム%>
+            <%= f.label :ニックネーム（必須）%>
           </div>
           <div class='field-input'>
             <%= f.text_field :nickname, autofocus: true%>
@@ -18,7 +18,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :メールアドレス%>
+            <%= f.label :メールアドレス（必須）%>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -26,7 +26,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :パスワード%>
+            <%= f.label :パスワード（必須）%>
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
@@ -41,10 +41,9 @@
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
         </div>
-        <div class="form-group">
+
           <div class='form-text-wrap'>
-            <label class="form-text">生年月日</label>
-            <span class="indispensable">必須</span>
+            <label class="form-text">生年月日（任意）</label>
           </div>
           <div class='input-birth-wrap'>
             <%= raw sprintf(
@@ -61,7 +60,7 @@
           </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :性別%>
+            <%= f.label :性別（任意）%>
           </div>
           <div class='field-input'>
             <%= f.text_field :gender_id%>
@@ -69,24 +68,25 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :お気に入りゲームタイトル%>
+            <%= f.label :お気に入りゲームタイトル（任意）%>
           </div>
           <div class='field-input'>
-            <%= f.text_area :favorite_game_title%>
+            <%= f.text_field :favorite_game_title%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :自己紹介文%>
+            <%= f.label :自己紹介文（任意）%>
           </div>
           <div class='field-input'>
-            <%= f.text_area :self_introduction%>
+            <%= f.text_area :self_introduction, size: "50x8"%>
           </div>
         </div>
+
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

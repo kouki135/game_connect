@@ -1,0 +1,39 @@
+<%= render "shared/header" %>
+</body>
+  <div class="main">
+    <div class="left_bar">
+      <%= link_to "投稿する", new_recruitment_path, class: :main_menu %>
+    </div>
+      <div class="user_detail">
+        <div>
+          <div>
+            <table class="detail-table">
+              <tbody>
+                <h3><%= @user.nickname %>さんのページ</h3>
+                <tr>
+                  <th class="detail-item">誕生日</th>
+                  <td class="detail-value"><%= @user.birthday %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">お気に入りのゲーム</th>
+                  <td class="detail-value"><%= @user.favorite_game_title %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">自己紹介文</th>
+                  <td class="detail-value"><%= @user.self_introduction %></td>
+                </tr>
+               </tbody>
+            </table>
+          </div>
+        </div>
+
+        <% if user_signed_in? && current_user.id == @user.id %>
+        <%= link_to "ログイン情報の編集", "#", class: "item-red-btn" %>
+        <%= link_to "プロフィールの編集(users)", edit_user_path, class:"item-destroy" %>
+        <%= link_to "プロフィールの編集(registrations)", edit_user_registration_path, class:"item-destroy" %>
+        <% end %>
+
+      </div>
+  </div>
+
+</body>

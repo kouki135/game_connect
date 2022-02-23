@@ -123,3 +123,51 @@
     margin: 0px;
     padding: 0px;
 }
+
+/* ユーザー一覧 */
+
+.use{
+  display: flex;
+}
+
+.follow-button{
+  /* position: absolute; */
+  display: inline-block;
+  right: 40%;
+  text-decoration: none;
+  background-color: rgba(121,122,115,0.7);
+  padding: 0 10px;
+  border-radius: 10px;
+  width: 90px;
+  text-align: center;
+  color: white;
+}
+
+/* ユーザー詳細 */
+
+.detail-table {
+
+  margin-bottom: 30px;
+  width: 100vh;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+/* ユーザー登録画面 */
+
+.field_input_self_introduction{
+  width: 500px;
+}

@@ -1,0 +1,8 @@
+<div class="users">
+  <div class='user' >
+    <div class="user_nickname">
+      <%= link_to user.nickname, user_path(user.id) %>
+      <a class="follow-button" data-remote="true" rel="nofollow" data-method="post" href="/followings?following_user=4">follow</a>
+    </div>
+  </div>
+</div>

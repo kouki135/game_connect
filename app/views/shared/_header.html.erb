@@ -31,7 +31,7 @@
       </div>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-white">ユーザー一覧</a></li>
+          <li><a href="/users" class="nav-link px-2 text-white">ユーザー一覧</a></li>
           <li><a href="#" class="nav-link px-2 text-white">フォローユーザー</a></li>
           <li><a href="#" class="nav-link px-2 text-white">チェックした募集</a></li>
           <li><a href="#" class="nav-link px-2 text-white">チャットルーム</a></li>
@@ -43,7 +43,7 @@
           <%= link_to  destroy_user_session_path, method: :DELETE do %>
           <button type="button" class="btn btn-outline-light me-2">ログアウト</button>
           <% end %>
-          <%= link_to  edit_user_registration_path do %>
+          <%= link_to user_path(current_user.id) do %>
           <button type="button" class="btn btn-warning"><%= current_user.nickname %></button>
           <% end %>
         </div>
