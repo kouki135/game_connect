@@ -2,6 +2,10 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :password, presence: true, on: :create
 
+  has_many :room_users
+  has_many :rooms, through: :room_users
+  has_many :messages
+
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX
 
