@@ -13,9 +13,7 @@
       <%= recruitment.title %>
     </div>
     <div class="recruitment_user">
-      <%= link_to "#", class: :recruitment_user do%>
-      <%= recruitment.user.nickname %>
-      <%end%>
+      <%= link_to recruitment.user.nickname, user_path(recruitment.user.id), class: :recruitment_user %>
     </div>
     <% if user_signed_in? && current_user.id == recruitment.user_id %>
     <%= link_to '削除', recruitment_path(recruitment.id), method: :delete %>

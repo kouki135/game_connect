@@ -28,9 +28,7 @@
         </div>
 
         <% if user_signed_in? && current_user.id == @user.id %>
-        <%= link_to "ログイン情報の編集", "#", class: "item-red-btn" %>
-        <%= link_to "プロフィールの編集(users)", edit_user_path, class:"item-destroy" %>
-        <%= link_to "プロフィールの編集(registrations)", edit_user_registration_path, class:"item-destroy" %>
+        <%= link_to "プロフィール、パスワードの編集", edit_user_registration_path, class:"item-destroy" %>
         <% end %>
 
       </div>
