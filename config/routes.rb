@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :recruitments, only: [:index, :new, :create, :destroy, :edit, :update]
   resources :users, only: [:index, :show, :edit, :update]
   resources :messages, only: [:index]
-  resources :rooms, only: [:new, :destroy]
+  resources :rooms, only: [:index, :new, :create, :destroy]
 end
