@@ -1,0 +1,27 @@
+<div>
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :text, class: 'form-message', placeholder: 'メッセージを入力してください' %>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
+
+<div class="chat-room-name">
+  <div class="chat-room-member">
+    <% @room.users.each do |user| %>
+    <%= user.nickname %>さん
+    <% end %>
+  </div>
+  <div>
+    のチャットルーム
+  </div>
+        <div class="header-button">
+      <%= link_to "ルーム削除", room_path(@room.id), method: :delete %>
+    </div>
+</div>
+
+<div class="messages">
+  <%= render partial: 'shared/message', collection: @messages %>
+</div>
+
+
