@@ -15,6 +15,9 @@
   <div>
     のチャットルーム
   </div>
+        <div class="header-button">
+      <%= link_to "ルーム削除", room_path(@room.id), method: :delete %>
+    </div>
 </div>
 
 <div class="messages">

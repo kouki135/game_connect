@@ -331,3 +331,7 @@
   text-decoration: none;
   color: white;
 }
+
+.chat-room-name{
+  display: flex;
+}
