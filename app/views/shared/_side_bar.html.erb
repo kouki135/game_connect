@@ -5,7 +5,7 @@
 </div>
 
 <div class="rooms">
-  <% current_user.rooms.each do |room| %>
+  <% current_user.rooms.order(updated_at: 'DESC').each do |room| %>
     <div class="room">
       <div class="room-name">
         <% room.users.each do |user| %>
