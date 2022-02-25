@@ -6,11 +6,14 @@
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
 
-<div class="chat-header">
-  <div class="left-header">
-    <div class="header-title">
-      <%= "相手の名前を入れる" %>
-    </div>
+<div class="chat-room-name">
+  <div class="chat-room-member">
+    <% @room.users.each do |user| %>
+    <%= user.nickname %>さん
+    <% end %>
+  </div>
+  <div>
+    のチャットルーム
   </div>
 </div>
 
