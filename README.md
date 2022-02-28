@@ -8,7 +8,7 @@
 | nickname            | string  | null: false               |
 | email               | string  | null: false, unique: true |
 | encrypted_password  | string  | null: false               |
-| gender_id           | integer |                           |
+| gender              | string  |                           |
 | favorite_game_title | text    |                           |
 | self_introduction   | string  |                           |
 | birthday            | date    |                           |

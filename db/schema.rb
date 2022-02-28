@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_063736) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.integer "gender_id"
+    t.string "gender"
     t.string "favorite_game_title"
     t.text "self_introduction"
     t.date "birthday"

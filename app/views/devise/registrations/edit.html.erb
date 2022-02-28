@@ -65,7 +65,7 @@
             <%= f.label :性別（任意）%>
           </div>
           <div class='field-input'>
-            <%= f.text_field :gender_id%>
+            <%= f.select :gender, [["男性", "男性"], ["女性", "女性"]], include_blank: "選択して下さい" %>
           </div>
         </div>
         <div class='field'>
