@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="IfUB2skYWB-ENNrXCcN7" name="ページ1">
-        <mxGraphModel dx="620" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="754" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="usersテーブル&lt;br&gt;&lt;br&gt;・nickname&lt;br&gt;・email&lt;br&gt;・encrypted_password&lt;br&gt;・sex_id&lt;br&gt;・favorite_game_title&lt;br&gt;・self_introduction&lt;br&gt;・birthday&lt;br&gt;※imageはActiveStorageで実装するため含まない" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                <mxCell id="2" value="usersテーブル&lt;br&gt;&lt;br&gt;・nickname&lt;br&gt;・email&lt;br&gt;・encrypted_password&lt;br&gt;・gender&lt;br&gt;・favorite_game_title&lt;br&gt;・self_introduction&lt;br&gt;・birthday&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="280" y="140" width="200" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="recruitmentsテーブル&lt;br&gt;&lt;br&gt;・game_title&lt;br&gt;・recruitment_title&lt;br&gt;・content&lt;br&gt;・user_id&lt;br&gt;・favorite_id" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#F0F0F0;align=left;" parent="1" vertex="1">
@@ -58,7 +58,7 @@
                 <mxCell id="14" value="roomsテーブル&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="550" y="250" width="200" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="messegesテーブル&lt;br&gt;&lt;br&gt;・content&lt;br&gt;・room_id&lt;br&gt;・user_id" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                <mxCell id="15" value="messegesテーブル&lt;br&gt;&lt;br&gt;・text&lt;br&gt;・room_id&lt;br&gt;・user_id" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="550" y="370" width="200" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="" style="endArrow=ERone;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#F0F0F0;strokeWidth=2;startArrow=ERmany;startFill=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="15" target="14" edge="1">
@@ -94,7 +94,7 @@
                         <mxPoint x="470" y="310" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="" style="endArrow=ERone;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#F0F0F0;strokeWidth=2;startArrow=ERmany;startFill=0;endFill=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="2">
+                <mxCell id="23" value="" style="endArrow=ERone;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#F0F0F0;strokeWidth=2;startArrow=ERmany;startFill=0;endFill=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="420" y="371" as="sourcePoint"/>
                         <mxPoint x="410" y="330" as="targetPoint"/>
