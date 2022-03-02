@@ -1,3 +1,4 @@
+<div class="recruitment_page">
 <div class="recruitment">
   <div class='upper-recruitment' >
     <div class="recruitment_game_title_date">
@@ -15,9 +16,20 @@
     <div class="recruitment_user">
       <%= link_to recruitment.user.nickname, user_path(recruitment.user.id), class: :recruitment_user %>
     </div>
+  </div>
+</div>
+  <div class="recruitment-btn">
     <% if user_signed_in? && current_user.id == recruitment.user_id %>
-    <%= link_to '削除', recruitment_path(recruitment.id), method: :delete %>
-    <%= link_to '編集', edit_recruitment_path(recruitment.id) %>
+    <div class="delete_button">
+    <button type="button" class="btn btn-danger btn-sm">
+    <%= link_to '削除', recruitment_path(recruitment.id), method: :delete,class: :delete_btn %>
+    </button>
+    </div>
+    <div class="edit_button">
+    <button type="button" class="btn btn-warning btn-sm">
+    <%= link_to '編集', edit_recruitment_path(recruitment.id), class: :edit_btn %>
+    </button>
+    </div>
     <% else %>
     <%# <%= link_to 'いいね', "#" %>
     <% end %>

@@ -7,7 +7,10 @@
           <div>
             <table class="detail-table">
               <tbody>
-                <h3><%= @user.nickname %>さんのページ</h3>
+                <tr>
+                  <th class="detail-item">ニックネーム</th>
+                  <td class="detail-value"><%= @user.nickname %></td>
+                </tr>
                 <tr>
                   <th class="detail-item">誕生日</th>
                   <td class="detail-value"><%= @user.birthday %></td>
@@ -27,12 +30,10 @@
                </tbody>
             </table>
           </div>
-        </div>
-
         <% if user_signed_in? && current_user.id == @user.id %>
         <%= link_to "プロフィール、パスワードの編集", edit_user_registration_path, class:"item-destroy" %>
         <% end %>
-
+        </div>
       </div>
   </div>
 

@@ -1,12 +1,13 @@
-<div class="users">
-  <div class='user' >
+<div class='user' >
+  <%= link_to user_path(user.id) do%>
+  <div class="user_list">
     <div class="user_nickname">
-      <%= link_to user_path(user.id) do%>
-      <%= user.nickname %>
-      <%= "　お気に入りゲーム：" %>
-      <%= user.favorite_game_title %>
-      <%# <a class="follow-button" data-remote="true" rel="nofollow" data-method="post" href="/followings?following_user=4">follow</a> %>
-      <% end %>
+    <%= user.nickname %>さん
+    </div>
+    <div class="user_favolite_game">
+    <%= "　お気に入りゲーム：" %>
+    <%= user.favorite_game_title %>
     </div>
   </div>
+  <% end %>
 </div>

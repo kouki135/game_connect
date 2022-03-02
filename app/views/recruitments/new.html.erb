@@ -12,8 +12,9 @@
         <%= f.text_field :game_title, class:'game_title' %>
         <h4>募集概要（必須）</h4>
         <%= f.text_area :title, class:'title' %>
-
-        <%= f.submit '投稿' %>
+        <div>
+        <%= f.submit '投稿', class:'post_button' %>
+        </div>
       <% end %>
     </div>
   </div>
