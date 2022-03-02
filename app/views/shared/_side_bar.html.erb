@@ -1,21 +1,12 @@
-<div class="side-bar-header">
-  <div class="create-room">
-    <%= link_to "チャットを作成する", new_room_path %>
-  </div>
-</div>
 
-<div class="rooms">
-  <% current_user.rooms.order(updated_at: 'DESC').each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <% room.users.each do |user| %>
-        <% unless user.nickname == current_user.nickname %>
-        <%= link_to user.nickname, room_messages_path(room) %>
-        <% else %>
-        <% end %>
-        <% end %>
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="left-bar-header">
+      <div class="create-recruitment">
+        <%= link_to "投稿する", new_recruitment_path %>
       </div>
     </div>
-  <% end %>
+    <div class="side-bar-under">
+    </div>
+  </div>
 </div>
-

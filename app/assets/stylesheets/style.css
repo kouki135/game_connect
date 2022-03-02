@@ -38,23 +38,33 @@
   display: flex;
 }
 
-.left_bar{
-  height: 90vh;
-  width: 250px;
-  background-color: chartreuse;
-  display: flex;
-  flex-direction: column;
-}
-
-.main_menu{
-  height: 40px;
-  text-decoration: none;
-  font-size: 25px;
-  color: rgb(238, 56, 56);
-}
-
 .nav-link{
   color: aqua;
+}
+
+/* サイドバー */
+
+.create-recruitment a{
+  color: rgb(3, 61, 15);
+  font-size: 20px;
+  border: 1px solid rgb(22, 94, 5);
+  padding: 14px;
+  text-decoration: none;
+}
+
+.left-bar-header{
+  height: 100px;
+  background-color: #6de4a2;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-bar-under{
+  height: calc(100vh - 100px);
+  background-color: #96f0b4;
+  padding: 0 20px;
 }
 
 /* 投稿フォーム */
@@ -189,7 +199,7 @@
 
 .side-bar-header{
   height: 100px;
-  background-color: #253141;
+  background-color: #364b66;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -204,7 +214,7 @@
 
 .create-room a{
   color: deepskyblue;
-  font-size: 10px;
+  font-size: 20px;
   border: 1px solid lightblue;
   padding: 14px;
   text-decoration: none;
@@ -212,7 +222,7 @@
 
 .rooms{
   height: calc(100vh - 100px);
-  background-color: #2f3e51;
+  background-color: #4784d4;
   padding: 0 20px;
   overflow: scroll;
 }

@@ -8,10 +8,10 @@ GAME CONNECT
 https://game-connect-37408.herokuapp.com/
 
 # テスト用アカウント
-- Basic認証パスワード：
-- Basic認証ID：
-- メールアドレス：
-- パスワード：
+- Basic認証パスワード：basic
+- Basic認証ID：2222
+- メールアドレス：111111@gmail.com
+- パスワード：a11111
 
 # 利用方法
 ## 募集投稿

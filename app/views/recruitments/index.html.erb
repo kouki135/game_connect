@@ -1,11 +1,9 @@
 <%= render "shared/header" %>
 </body>
   <div class="main">
-    <div class="left_bar">
-      <%= link_to "投稿する", new_recruitment_path, class: :main_menu %>
+    <%= render "shared/side_bar" %>
+    <div class="recruitments">
+      <%= render partial: 'recruitment', collection: @recruitments %>
     </div>
-      <div class="recruitments">
-        <%= render partial: 'recruitment', collection: @recruitments %>
-      </div>
   </div>
 </body>

@@ -1,5 +1,8 @@
 <%= render "shared/header" %>
-
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "shared/chat_side_bar" %>
+  </div>
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
   <%=form_with model: @room, local: true do |f|%>
@@ -24,4 +27,5 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
