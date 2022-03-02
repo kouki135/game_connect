@@ -28,14 +28,29 @@ https://game-connect-37408.herokuapp.com/
 [要件を定義したシート](https://docs.google.com/spreadsheets/d/1eXKCnQlPrR2En_VTSTNilo7_pdF7PdZOlsABzS0REXg/edit#gid=982722306) 
 
 # 実装した機能についての画像やGIFおよびその説明
-トップ画面
-[![Image from Gyazo](https://i.gyazo.com/fb5ca9a8e8648a884f25b8587fb2f85c.png)](https://gyazo.com/fb5ca9a8e8648a884f25b8587fb2f85c)
+トップ画面：フレンド募集の投稿一覧表示とユーザー一覧表示とユーザー登録とログインを選択することができます。
+[![Image from Gyazo](https://i.gyazo.com/3c274a7dfca690fb5db8eaede7704dc8.png)](https://gyazo.com/3c274a7dfca690fb5db8eaede7704dc8)
 
-ログイン済みトップ画面
-[![Image from Gyazo](https://i.gyazo.com/f8ec67b9db530ea926b0f29f3636df51.png)](https://gyazo.com/f8ec67b9db530ea926b0f29f3636df51)
+新規登録画面：ニックネーム、メールアドレス、パスワードが入力必須です。生年月日、性別、お気に入りゲームタイトル、自己紹介文は任意項目です。不備があるとエラー表示されます。
+[![Image from Gyazo](https://i.gyazo.com/1f60e2ddd44cbd6a6e0772fb32106145.gif)](https://gyazo.com/1f60e2ddd44cbd6a6e0772fb32106145)
 
-チャットページ
-[![Image from Gyazo](https://i.gyazo.com/70c07869e513d8f46d0d9f3a8f77096f.png)](https://gyazo.com/70c07869e513d8f46d0d9f3a8f77096f)
+ログイン済みトップ画面：ログインするとチャットルームへのリンク出現、ログインボタンはログアウトボタンへ、新規登録ボタンはユーザー情報ボタンへ変更されます。また、ログインしているユーザーの投稿には編集と削除ボタンが出現します。
+[![Image from Gyazo](https://i.gyazo.com/cf499954a06042836b6dde1db7f6de94.png)](https://gyazo.com/cf499954a06042836b6dde1db7f6de94)
+
+ユーザー一覧ページ：ニックネーム、お気に入りゲームタイトルが表示され、クリックでそのユーザーの詳細ページへ遷移します。
+[![Image from Gyazo](https://i.gyazo.com/072a6bf214cfa7bc12ca82a482fb426d.png)](https://gyazo.com/072a6bf214cfa7bc12ca82a482fb426d)
+
+ユーザー詳細ページ：ユーザー登録の際にニックネーム、誕生日、性別、お気に入りゲームタイトル、自己紹介文が表示されます。また、ユーザー自身の場合はユーザー編集ページへのリンクが出現します。
+[![Image from Gyazo](https://i.gyazo.com/9b6e9b2ef07d4d4ec68b71a5249a0a6f.png)](https://gyazo.com/9b6e9b2ef07d4d4ec68b71a5249a0a6f)
+
+投稿ページ：プレイしたいゲームタイトル、その他どんなフレンドを探しているかを自由に募集概要に記述して投稿することができます。
+[![Image from Gyazo](https://i.gyazo.com/60dd38acf33f09aa3113e3e0df5062e3.png)](https://gyazo.com/60dd38acf33f09aa3113e3e0df5062e3)
+
+チャットページ：気になるユーザーが見つかったらチャットルームにてコンタクトを取ることができます。動画の通りにユーザー選択してルームを作成することができます。
+[![Image from Gyazo](https://i.gyazo.com/ec237ce2decda522debc31ecd142335c.gif)](https://gyazo.com/ec237ce2decda522debc31ecd142335c)
+
+チャットメッセージ：メッセージは画像の通り新しい順に表示され削除ボタンも出現します。
+[![Image from Gyazo](https://i.gyazo.com/06caae06a37aedf57f9838a9d126af38.png)](https://gyazo.com/06caae06a37aedf57f9838a9d126af38)
 
 # 実装予定の機能
 現在、投稿をワード検索する機能を実装中。
