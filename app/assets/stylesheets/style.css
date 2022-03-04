@@ -241,6 +241,15 @@
   margin: 60px auto;
 }
 
+.user_page_chat{
+  background-color: white;
+  width: 110vh;
+  border:solid 1px;
+  border-radius: 20px;
+  margin: 20px 0px;
+  padding-bottom: 10px;
+}
+
 /* ユーザー登録画面 */
 
 .field_input_self_introduction{
