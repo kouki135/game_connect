@@ -10,7 +10,7 @@ class Recruitment < ApplicationRecord
     if search != ""
       Recruitment.where('game_title LIKE(?)', "%#{search}%")
     else
-      Recruitment.all
+      Recruitment.order(updated_at: 'DESC')
     end
   end
 
