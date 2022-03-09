@@ -32,7 +32,7 @@
           </div>
         <% if user_signed_in? && current_user.id == @user.id %>
         <%= link_to "プロフィール、パスワードの編集", edit_user_registration_path, class:"item-destroy" %>
-        <% else %>
+        <% elsif user_signed_in?%>
         <div class="user_page_chat">
         <%=form_with url: "/rooms", model: @room, local: true do |f|%>
           <div class='chat-room-form__field'>
