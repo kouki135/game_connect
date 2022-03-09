@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+<body>
+  <div class="main">
+    <%= render "shared/side_bar" %>
+
+    <div class="recruitment_detail_page">
+<div class="recruitment">
+  <div class='upper-recruitment' >
+    <div class="recruitment_game_title_date">
+      <div class="recruitment_game_title">
+      Game Title：<%= @recruitment.game_title %>
+      </div>
+      <div class="recruitment-date">
+      投稿日時<%= l @recruitment.updated_at %>
+      </div>
+    </div>
+    <div class="recruitment-content">
+      <%= @recruitment.title %>
+    </div>
+    <div class="recruitment_user">
+      <%= link_to @recruitment.user.nickname, user_path(@recruitment.user.id), class: :recruitment_user %>
+    </div>
+  </div>
+</div>
+
+<div class="comment-form">
+  <% if user_signed_in? %>
+    <%= form_with model: [@recruitment, @comment], id: "comment-form" do |f| %>
+      <%= f.text_area :comment , class: "comment-text"%>
+      <%= f.submit "コメントをする", class: "comment-submit" %>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+</div>
+
+  <div class="recruitment-btn">
+    <% if user_signed_in? && current_user.id == @recruitment.user_id %>
+    <div class="delete_button">
+    <button type="button" class="btn btn-danger btn-sm">
+    <%= link_to '削除', recruitment_path(@recruitment.id), method: :delete,class: :delete_btn %>
+    </button>
+    </div>
+    <div class="edit_button">
+    <button type="button" class="btn btn-warning btn-sm">
+    <%= link_to '編集', edit_recruitment_path(@recruitment.id), class: :edit_btn %>
+    </button>
+    </div>
+    <% else %>
+    <%# <%= link_to 'いいね', "#" %>
+    <% end %>
+  </div>
+
+    </div>
+    
+  </div>
+</body>

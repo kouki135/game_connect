@@ -1,13 +1,14 @@
 <div class="recruitment_page">
+<%= link_to recruitment_path(recruitment.id) do%>
 <div class="recruitment">
   <div class='upper-recruitment' >
     <div class="recruitment_game_title_date">
-    <div class="recruitment_game_title">
+      <div class="recruitment_game_title">
       Game Title：<%= recruitment.game_title %>
-    </div>
-    <div class="recruitment-date">
+      </div>
+      <div class="recruitment-date">
       投稿日時<%= l recruitment.updated_at %>
-    </div>
+      </div>
     </div>
     <div class="recruitment-content">
       <%= recruitment.title %>
@@ -17,6 +18,7 @@
     </div>
   </div>
 </div>
+<% end %>
   <div class="recruitment-btn">
     <% if user_signed_in? && current_user.id == recruitment.user_id %>
     <div class="delete_button">

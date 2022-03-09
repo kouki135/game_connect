@@ -19,6 +19,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def show
+    @recruitment = Recruitment.find(params[:id])
     @comments = @recruitment.comments.includes(:user)
     @comment = Comment.new
   end
