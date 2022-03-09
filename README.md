@@ -146,7 +146,7 @@ https://game-connect-37408.herokuapp.com/
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| text        | string     | null: false                    |
+| comment     | string     | null: false                    |
 | user        | references | null: false, foreign_key: true |
 | recruitment | references | null: false, foreign_key: true |
 

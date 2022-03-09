@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   }
 
   root to: "recruitments#index"
-  resources :recruitments, only: [:index, :new, :create, :destroy, :edit, :update]
+  resources :recruitments, only: [:index, :new, :create, :destroy, :edit, :update] do
+    collection do
+      get 'search'
+    end
+  end
   resources :users, only: [:index, :show, :edit, :update]
   resources :rooms, only: [:index, :new, :create, :destroy] do
     resources :messages, only: [:index, :create]

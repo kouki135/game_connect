@@ -40,6 +40,10 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def search
+    @recruitments = Recruitment.search(params[:keyword])
+  end
+
   private
 
   def recruitment_params
