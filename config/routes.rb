@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+      resources :comments, only: :create
   end
   resources :users, only: [:index, :show, :edit, :update]
   resources :rooms, only: [:index, :new, :create, :destroy] do
