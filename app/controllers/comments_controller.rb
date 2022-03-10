@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to recruitment_path(params[:recruitment_id])
     end
-    binding.pry
   end
 
   private
