@@ -1,6 +1,7 @@
 class CommentChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "comment_channel"
+    @recruitment = Recruitment.find(params[:recruitment_id])
+    stream_for @recruitment
   end
 
   def unsubscribed

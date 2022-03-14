@@ -2,8 +2,9 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    @recruitment = Recruitment.find(params[:recruitment_id])
     if @comment.save
-      ActionCable.server.broadcast "comment_channel", {comment: @comment, user: @comment.user}
+      CommentChannel.broadcast_to @recruitment, { comment: @comment, user: @comment.user }
       # redirect_to recruitment_path(params[:recruitment_id])
     end
   end
