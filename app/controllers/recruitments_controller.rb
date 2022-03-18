@@ -18,6 +18,12 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def show
+    @recruitment = Recruitment.find(params[:id])
+    @comments = @recruitment.comments.includes(:user)
+    @comment = Comment.new
+  end
+
   def destroy
     @recruitment = Recruitment.find(params[:id])
     if current_user.id == @recruitment.user_id

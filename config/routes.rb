@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   }
 
   root to: "recruitments#index"
-  resources :recruitments, only: [:index, :new, :create, :destroy, :edit, :update] do
+  resources :recruitments do
     collection do
       get 'search'
     end
+      resources :comments, only: :create
   end
   resources :users, only: [:index, :show, :edit, :update]
   resources :rooms, only: [:index, :new, :create, :destroy] do
