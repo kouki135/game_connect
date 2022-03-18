@@ -124,6 +124,10 @@
   border-radius: 10px;
 }
 
+.recruitment_one{
+  text-decoration: none;
+}
+
 .upper-recruitment{
   text-decoration: none;
 }
@@ -170,11 +174,7 @@
 
 /* 投稿詳細 */
 
-.detail-game-title{
-  border: 2px solid black ;
-  width: 100px;
-  height: 10vh;
-}
+
 
 /* エラーメッセージ */
 
@@ -435,6 +435,11 @@
 
 .comment-form{
   display: flex;
+  margin-left: 20px;
+}
+
+.comments{
+  margin-left: 20px;
 }
 
 .comment-text{
